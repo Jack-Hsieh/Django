@@ -30,7 +30,7 @@ DEBUG = False
 # app not on App Engine, make sure to set an appropriate host here.
 # See https://docs.djangoproject.com/en/1.10/ref/settings/
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['jack.enadv.idv.tw']
 
 
 # Application definition
