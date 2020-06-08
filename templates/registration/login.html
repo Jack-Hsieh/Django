@@ -1,0 +1,82 @@
+<!-- templates/registration/login.html -->
+
+<!-- <h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form> -->
+
+
+<!-- <h2>Login</h2>
+<form method="post">
+  <input type="hidden" name="csrfmiddlewaretoken" value="Rv9eb5eAsBI3pwkrODh0zcC0aNoC8jqTO1H42ckX96YffsaneDh3aIJ5AKyer1n0">
+  <p><label for="id_username">Username:</label> <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username"></p>
+<p><label for="id_password">Password:</label> <input type="password" name="password" autocomplete="current-password" required id="id_password"></p>
+  <button type="submit">Login</button>
+</form> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Login-Accounts</title>
+
+    <style>
+      td {
+        padding: 5px
+      }
+    </style>
+    <!-- Bootstrap core CSS -->
+    <link href="./Signin Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="text-center" data-gr-c-s-loaded="true">
+    <nav class="navbar navbar-inverse navbar-fixed-top font-center">
+      <center><h1>Gold Rush From Appraisals </h1></center>
+    </nav>
+	{% if form.errors %}
+	<center>
+		<div>
+			<p style="color:Red"><b>您的帳號或密碼有誤。</b><br>Invalid login, please try again.</p>
+		</div>
+		<div>
+			<p></p>
+		</div>
+	</center>
+	{% endif %}
+
+	{% if next %}
+	    {% if user.is_authenticated %}
+	    <p>您沒有權限造訪此網頁。</p>
+	    {% else %}
+	    <p>請先登入。</p>
+	    {% endif %}
+	{% endif %}
+	<form method="post" action="/accounts/login/" class="form-signin" pb-autologin="true" autocomplete="off">
+	{% csrf_token %}
+	<table align="center" style="margin-top:100px">
+	<tr> 
+	    <td>{{ form.username.label_tag }}</td>
+	    <td>{{ form.username }}</td>
+	</tr>
+	<tr>
+	    <td>{{ form.password.label_tag }}</td>
+	    <td>{{ form.password }}</td>
+	</tr>
+	<tr>
+	<!-- 	我是next:{{ next }} -->
+	</tr>
+	<tr>
+	    <td></td>
+	    <td>
+	        <input type="submit" value="login" class="btn small-button" />
+	    </td>
+	</tr>
+	</table>
+    <input type="hidden" name="next" value="{{ next }}" />
+	</form>
+</body>
+</html>
