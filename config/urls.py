@@ -19,7 +19,7 @@ from django.views.generic.base import TemplateView # new
 #from config.views import pricing
 from . import views #new 20200602
 from users import views # from users app import views file
-from users.views import home, pricing, about
+from users.views import home, pricing, about, register, logout
 from config.views import feature # import feature from views
 
 
@@ -29,7 +29,8 @@ urlpatterns = [
     path('', home),
     #path('', TemplateView.as_view(template_name='home.html'), name='home'), # new
     path('pricing/',pricing), #new
-    path('accounts/', include('users.urls')), # new 20200603 for users signup # for user signout
+    #path('accounts/', include('users.urls')), # new 20200603 for users signup # for user signout
+    path('accounts/signup/', register),
     path('about/', about),
     path('feature/', feature)
 ]
