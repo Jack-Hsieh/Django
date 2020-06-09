@@ -1,4 +1,4 @@
-![summarization](app_news_summary/static/images/ss_logo.png)
+Django Deployment on GCP VM
 
 (Credit: https://github.com/yalonw/Summarization )
 
