@@ -1,5 +1,7 @@
 ![summarization](app_news_summary/static/images/ss_logo.png)
 
+(Credit: https://github.com/yalonw/Summarization )
+
 <br>
 
 # 開發版
