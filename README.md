@@ -1,6 +1,6 @@
 Django Deployment on GCP VM
 
-(Credit: https://github.com/yalonw/Summarization )
+(參考資料Credit: https://github.com/yalonw/Summarization )
 
 <br>
 
